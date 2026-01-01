@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Portfolio • Analytics Dashboard</title>
+    <link rel="stylesheet" href="styles.css" />
+    <!-- Chart.js CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  </head>
+  <body>
+    <div id="bg-layers" aria-hidden="true">
+      <div class="bg-layer layer-1"></div>
+      <div class="bg-layer layer-2"></div>
+      <div class="bg-layer layer-3"></div>
+    </div>
+
+    <div class="app">
+      <aside class="sidebar">
+        <div class="profile">
+          <div class="avatar" aria-hidden="true"></div>
+          <h1 class="name">Mohamed Fathin</h1>
+          <p class="role">Data Analyst • Frontend</p>
+        </div>
+        <nav class="menu" role="navigation">
+          <button class="menu-item active" data-target="profile">Profile</button>
+          <button class="menu-item" data-target="skills">Skills</button>
+          <button class="menu-item" data-target="analytics">Analytics</button>
+          <button class="menu-item" data-target="projects">Projects</button>
+          <button class="menu-item" data-target="contact">Contact</button>
+        </nav>
+        <div class="sidebar-footer">
+          <button class="cta">Hire Me</button>
+        </div>
+      </aside>
+
+      <main class="main">
+        <header class="main-header">
+          <div class="breadcrumbs">Dashboard</div>
+          <div class="actions">
+            <button class="icon-btn" title="Notifications">🔔</button>
+            <button class="icon-btn" title="Settings">⚙️</button>
+          </div>
+        </header>
+
+        <section id="profile" class="page active">
+          <div class="grid">
+            <div class="card glass large-card" data-tilt>
+              <h2>About Me</h2>
+              <p>
+                Futuristic portfolio and analytics dashboard demo showcasing interactive
+                charts, motion UI and glassmorphism styles.
+              </p>
+            </div>
+            <div class="card glass stats" data-tilt>
+              <h3>Quick Stats</h3>
+              <div class="stats-grid">
+                <div>
+                  <span class="stat-val">1.2K</span>
+                  <span class="stat-label">Followers</span>
+                </div>
+                <div>
+                  <span class="stat-val">320</span>
+                  <span class="stat-label">Projects</span>
+                </div>
+                <div>
+                  <span class="stat-val">98%</span>
+                  <span class="stat-label">Satisfaction</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="skills" class="page">
+          <div class="grid">
+            <div class="card glass" data-tilt>
+              <h3>Skills vs Progress</h3>
+              <canvas id="skillsChart"></canvas>
+            </div>
+            <div class="card glass" data-tilt>
+              <h3>Top Tools</h3>
+              <ul class="chips">
+                <li>Python</li>
+                <li>JavaScript</li>
+                <li>React</li>
+                <li>Charting</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <section id="analytics" class="page">
+          <div class="grid">
+            <div class="card glass large-card" data-tilt>
+              <h3>Monthly Activity</h3>
+              <canvas id="monthlyChart"></canvas>
+            </div>
+            <div class="card glass" data-tilt>
+              <h3>Engagement</h3>
+              <canvas id="engagementChart"></canvas>
+            </div>
+            <div class="card glass" data-tilt>
+              <h3>Recent Notes</h3>
+              <p class="muted">Nice micro-interaction example on chart hover and buttons.</p>
+            </div>
+          </div>
+        </section>
+
+        <section id="projects" class="page">
+          <div class="grid single-col">
+            <div class="card glass project" data-tilt>
+              <h3>Project Aurora</h3>
+              <p>Interactive dashboard with glossy UI and 3D motion.</p>
+            </div>
+            <div class="card glass project" data-tilt>
+              <h3>Learning Tracker</h3>
+              <p>Monthly learning analytics and skill progression charts.</p>
+            </div>
+          </div>
+        </section>
+
+        <section id="contact" class="page">
+          <div class="grid single-col">
+            <div class="card glass contact-card" data-tilt>
+              <h3>Contact</h3>
+              <p>Email: <a href="mailto:fathin@example.com">fathin@example.com</a></p>
+              <p>Location: Remote</p>
+              <div style="margin-top:12px"><button class="cta">Send Message</button></div>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <nav class="bottom-nav" aria-hidden="false">
+      <button class="bn-item active" data-target="profile">🏠</button>
+      <button class="bn-item" data-target="skills">🧠</button>
+      <button class="bn-item" data-target="analytics">📊</button>
+      <button class="bn-item" data-target="projects">📁</button>
+      <button class="bn-item" data-target="contact">✉️</button>
+    </nav>
+
+    <script src="script.js" type="module"></script>
+  </body>
+</html>
